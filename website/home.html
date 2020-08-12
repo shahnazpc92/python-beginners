@@ -1,0 +1,318 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<head>
+<title>Sentiment Analysis On Social Media</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- font CSS -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="css/font.css" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<script src="js/jquery2.0.3.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/screenfull.js"></script>
+		<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+			
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});	
+		});
+		</script>
+<!-- charts -->
+<script src="js/raphael-min.js"></script>
+<script src="js/morris.js"></script>
+<link rel="stylesheet" href="css/morris.css">
+<!-- //charts -->
+<!--skycons-icons-->
+<script src="js/skycons.js"></script>
+<!--//skycons-icons-->
+</head>
+<body class="dashboard-page">
+	<script>
+	        var theme = $.cookie('protonTheme') || 'default';
+	        $('body').removeClass (function (index, css) {
+	            return (css.match (/\btheme-\S+/g) || []).join(' ');
+	        });
+	        if (theme !== 'default') $('body').addClass(theme);
+        </script>
+	<nav class="main-menu">
+		<ul>
+			<li>
+				<a href="home.html">
+					<i class="fa fa-home nav_icon"></i>
+					<span class="nav-text">
+					Dashboard
+					</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="logout">
+			<li>
+			<a href="login.html">
+			<i class="icon-off nav-icon"></i>
+			<span class="nav-text">
+			Login
+			</span>
+			</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="wrapper scrollable">
+		<nav class="user-menu">
+			<a href="javascript:;" class="main-menu-access">
+			<i class="icon-proton-logo"></i>
+			<i class="icon-reorder"></i>
+			</a>
+		</nav>
+		<section class="title-bar">
+			<div class="logo">
+				<h1><a href="home.html"><img src="images/logo.png" alt="" />sentilyser</a></h1>
+			</div>
+			
+			</div>
+			
+			<div class="header-right">
+				<div class="profile_details_left">
+					<div class="header-right-left">
+						<!--notifications of menu start -->
+					
+					</div>	
+					<div class="profile_details">		
+						<ul>
+							<li class="dropdown profile_details_drop">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<div class="profile_img">	
+										<span class="prfil-img"><i class="fa fa-user" aria-hidden="true"></i></span> 
+										<div class="clearfix"></div>	
+									</div>	
+								</a>
+								<ul class="dropdown-menu drp-mnu">
+									<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
+									<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li> 
+									<li> <a href="#"><i class="fa fa-sign-out"></i> Login</a> </li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</section>
+		<div class="main-grid">
+			
+			<div class="social grid">
+					<div class="grid-info">
+                        <div class="col-md-3 top-comment-grid">
+                            <div class="comments views">
+                                <div class="comments-icon">
+                                    <i class="one fa fa-comments"></i>
+                                </div>
+                                <div class="comments-info views-info">
+                                    <h3>+ve</h3>
+                                    <a href="#">Comments</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 top-comment-grid">
+                            <div class="comments likes">
+                                <div class="comments-icon">
+                                    <i class="fa fa-facebook"></i>
+                                </div>
+                                <div class="comments-info likes-info">
+                                    <h3>Facebook</h3>
+                                    <a href="#">Likes</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 top-comment-grid">
+                            <div class="comments tweets">
+                                <div class="comments-icon">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="comments-info tweets-info">
+                                    <h3>Twitter</h3>
+                                    <a href="#">Tweets</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 top-comment-grid">
+                            <div class="comments">
+                                <div class="comments-icon">
+                                    <i class="fa fa-comments"></i>
+                                </div>
+                                <div class="comments-info">
+                                    <h3>-ve</h3>
+                                    <a href="#">Comments</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+            </div>
+            <!-- Charts -->
+            <div class="main-grid">
+                <div class="agile-grids">	
+                    
+                    <div class="chart-heading">
+                        <h2>Charts</h2>
+                    </div>
+        
+                    <!-- agile-grid-left -->
+                    <div class="col-md-6 agile-grid-left">
+                        <div class="w3l-chart">
+                            <h3>Multiple Data Sets</h3>
+                            <div id="graph"></div>
+                        </div>
+                    </div>
+                    <!-- //agile-grid-left -->
+                    <!-- agile-grid-right -->
+                    <div class="col-md-6 agile-grid-right">
+                        <div class="w3l-chart1">
+                            <h3>Single Data Set</h3>
+                            <div id="graph2"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!-- //agile-grid-right -->
+                </div>
+            </div>
+                
+                <!--Charts End -->
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<p>© 2020 Sentilyser . All Rights Reserved . Design by <a href="#">ShiNaaz</a></p>
+		</div>
+		<!-- //footer -->
+    </section>
+    <script>
+			$(function(){
+				$('#graph').graphify({
+					//options: true,
+					start: 'combo',
+					obj: {
+						id: 'ggg',
+						width: 620,
+						height: 375,
+						xGrid: false,
+						legend: true,
+						title: 'Linux vs Mac',
+						points: [
+							[7, 26, 33, 74, 12, 49, 33],
+							[32, 46, 75, 38, 62, 20, 52]
+						],
+						pointRadius: 3,
+						colors: ['blue', 'red'],
+						xDist: 70,
+						dataNames: ['Linux', 'Mac'],
+						xName: 'Day',
+						tooltipWidth: 15,
+						animations: true,
+						pointAnimation: true,
+						averagePointRadius: 10,
+						design: {
+							tooltipColor: '#fff',
+							gridColor: 'grey',
+							tooltipBoxColor: 'green',
+							averageLineColor: 'green',
+							pointColor: 'green',
+							lineStrokeColor: 'grey',
+						}
+					}
+				});
+				$('#graph2').graphify({
+					start: 'donut',
+					obj: {
+						id: 'lol',
+						legend: false,
+						showPoints: true,
+						width: 775,
+						legendX: 450,
+						pieSize: 200,
+						shadow: true,
+						height: 400,
+						animations: true,
+						x: [2000, 2001, 2002, 2003, 2004, 2005, 2006],
+						points: [17, 33, 64, 22, 87, 45, 38],
+						xDist: 90,
+						scale: 12,
+						yDist: 35,
+						grid: false,
+						xName: 'Year',
+						dataNames: ['Amount'],
+						design: {
+							lineColor: 'red',
+							tooltipFontSize: '20px',
+							pointColor: 'red',
+							barColor: 'blue',
+							areaColor: 'orange'
+						}
+					}
+				});
+				var bar = new GraphBar({
+					attachTo: '#graph3',
+					special: 'combo',
+					height: 600,
+					width: 620,
+					yDist: 50,
+					xDist: 70,
+					showPoints: false,
+					xGrid: false,
+						legend: true,
+						points: [
+							[17, 21, 51, 74, 12, 49, 33],
+							[32, 15, 75, 20, 45, 90, 52]
+						],
+						colors: ['red', 'orange'],
+						dataNames: ['Hot', 'Warm'],
+						xName: 'Day',
+						tooltipWidth: 15,
+						design: {
+							tooltipColor: '#fff',
+							gridColor: 'black',
+							tooltipBoxColor: 'green',
+							averageLineColor: 'blue',
+						}
+				});
+				bar.init();
+			});
+		</script>
+        <!-- //agile-grid-right -->
+    <script src="js/bootstrap.js"></script>
+    <!-- agile-grid-right -->
+<script src="js/graph.js"></script>
+<!-- //agile-grid-right -->
+<script src="js/proton.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/proton.js"></script>
+</body>
+</html>
